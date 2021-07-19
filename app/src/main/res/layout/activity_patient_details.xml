@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientDetailsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:textSize="20dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/blue_primary"
+                android:text="Fill in patient profile"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Personal Details"
+                android:textSize="18sp"
+                android:textColor="@color/blue_primary"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etFirstName"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edt_bg"
+                android:hint="First Name" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etMiddleName"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edt_bg"
+                android:hint="Middle Name" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/edtLastName"
+                android:background="@drawable/edt_bg"
+                android:hint="Last Name" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/edtDOB"
+                android:focusable="false"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edt_bg"
+                android:hint="DOB" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/edtGender"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine|textCapSentences"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edt_bg"
+                 />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/edtLocation"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine|textCapSentences"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edt_bg"
+               />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TableRow style="@style/BoxRow">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Taking any medications,currently?" />
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_gravity="end"
+                        android:id="@+id/radioGroupMeds"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Yes"
+                        android:checked="true"
+                        android:id="@+id/medYes"
+                        android:layout_height="wrap_content"/>
+                        <RadioButton
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="No"
+                            android:id="@+id/medNo"
+                            android:layout_height="wrap_content"/>
+                    </RadioGroup>
+
+                </TableRow>
+                </TableLayout>
+                  </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="If yes,please list it here" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/currentMeds"
+                android:background="@drawable/edt_bg"
+                android:hint="Indicate the medication you are taking" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Social History"
+                android:textSize="18sp"
+                android:textColor="@color/blue_primary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TableRow style="@style/BoxRow">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Do you have a mosquito net?" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="end"
+                            android:id="@+id/netRadio"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="Yes"
+                                android:checked="true"
+                                android:id="@+id/netYes"
+                                android:layout_height="wrap_content"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="No"
+                                android:id="@+id/netNo"
+                                android:layout_height="wrap_content"/>
+                        </RadioGroup>
+
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="How regular do you treat your mosquito net?" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/edtNetTreatment"
+                    android:background="@drawable/edt_bg"
+                    android:hint="on a scale of 1-5(1 being least and 5 most likely)" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Signs and Symptoms"
+                android:textSize="18sp"
+                android:textColor="@color/blue_primary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TableRow style="@style/BoxRow">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:text="Fever?" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="end"
+                            android:id="@+id/feverRadio"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="Yes"
+                                android:checked="true"
+                                android:id="@+id/feverYes"
+                                android:layout_height="wrap_content"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="No"
+                                android:id="@+id/feverNo"
+                                android:layout_height="wrap_content"/>
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow style="@style/BoxRow">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:text="Diarrhea?" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="end"
+                            android:id="@+id/diarrheaRadio"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="Yes"
+                                android:checked="true"
+                                android:id="@+id/diarrheaYes"
+                                android:layout_height="wrap_content"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="No"
+                                android:id="@+id/diarrheaNo"
+                                android:layout_height="wrap_content"/>
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow style="@style/BoxRow">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:text="Flu like symptoms?" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="end"
+                            android:id="@+id/fluRadio"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="Yes"
+                                android:id="@+id/fluYes"
+                                android:checked="true"
+                                android:layout_height="wrap_content"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="No"
+                                android:id="@+id/fluNo"
+                                android:layout_height="wrap_content"/>
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow style="@style/BoxRow">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:text="Yellow Skin?" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="end"
+                            android:id="@+id/yellowRadio"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="Yes"
+                                android:checked="true"
+                                android:id="@+id/yellowYes"
+                                android:layout_height="wrap_content"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="No"
+                                android:id="@+id/yellowNo"
+                                android:layout_height="wrap_content"/>
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow style="@style/BoxRow">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:text="Chills?" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="end"
+                            android:id="@+id/chillsRadio"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="Yes"
+                                android:checked="true"
+                                android:id="@+id/chillsYes"
+                                android:layout_height="wrap_content"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="No"
+                                android:id="@+id/chillsNo"
+                                android:layout_height="wrap_content"/>
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow style="@style/BoxRow">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:text="Fatigue?" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="end"
+                            android:id="@+id/fatigueRadio"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="Yes"
+                                android:checked="true"
+                                android:id="@+id/fatigueYes"
+                                android:layout_height="wrap_content"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="No"
+                                android:id="@+id/fatigueNo"
+                                android:layout_height="wrap_content"/>
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow style="@style/BoxRow">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:text="Sweats?" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="end"
+                            android:id="@+id/sweatRadio"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="Yes"
+                                android:checked="true"
+                                android:id="@+id/sweatsYes"
+                                android:layout_height="wrap_content"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="No"
+                                android:id="@+id/sweatsNo"
+                                android:layout_height="wrap_content"/>
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow style="@style/BoxRow">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:text="Sleep distrubances?" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="end"
+                            android:id="@+id/sleepRadio"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="Yes"
+                                android:checked="true"
+                                android:id="@+id/sleepYes"
+                                android:layout_height="wrap_content"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:text="No"
+                                android:id="@+id/sleepNo"
+                                android:layout_height="wrap_content"/>
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:background="@drawable/edt_bg"
+                android:hint="Other"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/edtOther"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/btnSave"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_bg"
+                android:text="Save Details"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
